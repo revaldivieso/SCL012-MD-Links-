@@ -1,4 +1,33 @@
 {
   "name": "md-links",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "dependencies": {
+    "is-valid-path": "^0.1.1",
+    "markdown-link-extractor": "^1.2.2"
+  },
+  "description": "## Índice",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revaldivieso/SCL012-MD-Links-.git"
+  },
+  "keywords": [
+    "markdown",
+    ".md",
+    "URL",
+    "HTTP"
+  ],
+  "author": "Vianny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/revaldivieso/SCL012-MD-Links-/issues"
+  },
+  "homepage": "https://github.com/revaldivieso/SCL012-MD-Links-#readme"
 }
