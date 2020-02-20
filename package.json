@@ -2,8 +2,10 @@
   "name": "md-links",
   "version": "0.1.0",
   "dependencies": {
+    "chalk": "^3.0.0",
     "is-valid-path": "^0.1.1",
-    "markdown-link-extractor": "^1.2.2"
+    "markdown-link-extractor": "^1.2.2",
+    "node-fetch": "^2.6.0"
   },
   "description": "## Índice",
   "main": "index.js",
