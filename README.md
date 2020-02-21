@@ -3,14 +3,13 @@
 ## Índice
 
 * [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
+* [2. Objetivo](#2-Objetivo)
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
 * [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Entregables](#6-entregables)
-* [7. Hacker edition](#7-hacker-edition)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist](#9-checklist)
+* [5. Diagrama de flujo](#5-diagrama de flujo)
+* [6.  Documentación técnica de la librería](#6-documentación técnica de la librería)
+* [7. Guía de instalación y uso de la librería](#7-Guía de instalación y uso de la librería)
+
 
 ***
 
@@ -33,20 +32,9 @@ algunas estadísticas.
 
 ![md-links](https://user-images.githubusercontent.com/110297/42118443-b7a5f1f0-7bc8-11e8-96ad-9cc5593715a6.jpg)
 
-## 2. Resumen del proyecto
+## 2. Objetivo
 
-[Node.js](https://nodejs.org/es/) es un entorno de ejecución para JavaScript
-construido con el [motor de JavaScript V8 de Chrome](https://developers.google.com/v8/).
-Esto nos va a permitir ejecutar JavaScript en el entorno del sistema operativo,
-ya sea tu máquina o un servidor, lo cual nos abre las puertas para poder
-interactuar con el sistema en sí, archivos, redes, ...
-
-En este proyecto nos alejamos un poco del navegador para construir un programa
-que se ejecute usando Node.js, donde aprenderemos sobre cómo interactuar con el
-sistema archivos, con el entorno (_proceso_, _env_, _stdin/stdout/stderr_), ...
-
-En este proyecto crearás una herramienta de línea de comando (CLI) así como tu
-propia librería (o biblioteca - library) en JavaScript.
+El objetivo de este proyecto es aprender a crear nuestra propia librería (o biblioteca - library) en JavaScript.
 
 ## 3. Objetivos de aprendizaje
 
@@ -97,61 +85,16 @@ A continuación puedes ver los objetivos de aprendizaje de este proyecto:
 
 ## 4. Consideraciones generales
 
-* Este proyecto se debe "resolver" de manera individual.
+* La librería está implementada en JavaScript para ser ejecutada con Node.js.
+* El módulo es instalable desde npm install montezakarim/md-links.
+* Los tests unitarios: Jest para tus pruebas unitarias.
 
-* La librería y script ejecutable (herramienta de línea de comando -
-  CLI) debe estar implementada en JavaScript para ser ejecutada con
-  Node.js. **Está permitido usar librerías externas**.
+## 5. Diagrama de flujo
+![diagrama] (readme/diagrama.png)
 
-* Tu módulo debe ser instalable via `npm install <github-user>/md-links`. Este
-  módulo debe incluir tanto un _ejecutable_ que podamos invocar en la línea de
-  comando como una interfaz que podamos importar con `require` para usarlo
-  programáticamente.
+## 6. Documentación técnica de la librería
 
-* Los tests unitarios deben cubrir un mínimo del 70% de _statements_,
-  _functions_, _lines_ y _branches_. Te recomendamos explorar [Jest](https://jestjs.io/)
-  para tus pruebas unitarias.
-
-* Para este proyecto no está permitido utilizar `async/await`.
-
-* Para este proyecto es opcional el uso de ES Modules `(import/export)`, en el
-  caso optes utilizarlo deberás de crear un script de `build` en el `package.json`
-  que los transforme en `requires` y `module.exports` con ayuda de babel.
-
-## 5. Criterios de aceptación mínimos del proyecto
-
-Para comenzar este proyecto tendrás que hacer un _fork_ y _clonar_ este
-repositorio.
-
-Antes de comenzar a codear, es necesario crear un plan de acción. Esto debería
-quedar detallado en el `README.md` de tu repo y en una serie de _issues_
-y _milestones_ para priorizar y organizar el trabajo, y para poder hacer
-seguimiento de tu progreso.
-
-Dentro de cada _milestone_ se crearán y asignarán los _issues_ que cada quien
-considere necesarios.
-
-### Archivos del proyecto
-
-* `README.md` con descripción del módulo, instrucciones de instalación/uso,
-  documentación del API y ejemplos. Todo lo relevante para que cualquier
-  developer que quiera usar tu librería pueda hacerlo sin inconvenientes.
-* `index.js`: Desde este archivo debes exportar una función (`mdLinks`).
-* `package.json` con nombre, versión, descripción, autores, licencia,
-  dependencias, scripts (pretest, test, ...)
-* `.editorconfig` con configuración para editores de texto. Este archivo no se
-  debe cambiar.
-* `.eslintrc` con configuración para linter. Este archivo no
-  se debe cambiar.
-* `.gitignore` para ignorar `node_modules` u otras carpetas que no deban
-  incluirse en control de versiones (`git`).
-* `test/md-links.spec.js` debe contener los tests unitarios para la función
-  `mdLinks()`. Tu inplementación debe pasar estos tets.
-
-### JavaScript API
-
-El módulo debe poder importarse en otros scripts de Node.js y debe ofrecer la
-siguiente interfaz:
+El objetivo de esta librería es validar los links encontrados en un archivo o archivos .md y obtener estadísticas de los mismos. Estose logro por medio de la siguiente implementación::
 
 #### `mdLinks(path, options)`
 
@@ -262,69 +205,51 @@ Unique: 3
 Broken: 1
 ```
 
-## 6. Entregables
+## 7. Guía de instalación y uso de la librería
 
-Módulo instalable via `npm install <github-user>/md-links`. Este módulo debe
-incluir tanto un ejecutable como una interfaz que podamos importar con `require`
-para usarlo programáticamente.
+Módulo instalable via npm install /md-links. Este módulo incluye un ejecutable que puedes invocar en la línea de comando como una interfaz que puedes importar con require para usarlo programáticamente.
 
-## 7. Hacker edition
+Esto hará que se instalen las dependencias, para que el módulo funcione correctamente. Este módulo tiene una función principal llamada mdlinks, que tiene dos parametros PathUrl : Es el parámetro que recibe la dirección del archivo y Option : Que es el parámetro que recibe la opción ```--validate o --stats.```
 
-Las secciones llamadas _Hacker Edition_ son **opcionales**. Si **terminaste**
-con todo lo anterior y te queda tiempo, intenta completarlas. Así podrás
-profundizar y/o ejercitar más sobre los objetivos de aprendizaje del proyecto.
+### Instalación
+Módulo instalable via npm install mdlink-sogcm. Este módulo incluye un ejecutable que se puede importar con require para usarlo programáticamente.
 
-* Puedes agregar la propiedad `line` a cada objeto `link` indicando en qué línea
-  del archivo se encontró el link.
-* Puedes agregar más estadísticas.
-* Integración continua con Travis o Circle CI.
+Puede instalarse via ``` npm install --global mdlink-sogcm ``` si se desea implementar globalmente
 
-***
+### Uso
+En la consola se debe escribir md-links y el nombre del archivo o documento que se desee analizar:
+```sh
+$ md-links ../carpeta 
+```
+o
+```sh
+$ md-links archivo.md
+```
+Al correr esto, en consola se imprimen todos los links contenidos respectivamente
 
-## 8. Pistas, tips y lecturas complementarias
+Si se le agrega al comando --validate devolverá el estado de cada link respecto al servidor
+```
+$ md-links ../carpeta --validate
+```
+o
+```
+$ md-links archivo.md --validate
+```
+Si en su lugar se agrega al comando --stats devolverá cuantos links hay y cuantos de estos son únicos
+```
+$ md-links ../carpeta --stats
+```
+o
 
-### FAQs
-
-#### ¿Cómo hago para que mi módulo sea _instalable_ desde GitHub?
-
-Para que el módulo sea instalable desde GitHub solo tiene que:
-
-* Estar en un repo público de GitHub
-* Contener un `package.json` válido
-
-Con el comando `npm install githubname/reponame` podemos instalar directamente
-desde GitHub. Ver [docs oficiales de `npm install` acá](https://docs.npmjs.com/cli/install).
-
-Por ejemplo, el [`course-parser`](https://github.com/Laboratoria/course-parser)
-que usamos para la currícula no está publicado en el registro público de NPM,
-así que lo instalamos directamente desde GitHub con el comando `npm install
-Laboratoria/course-parser`.
-
-### Sugerencias de implementación
-
-La implementación de este proyecto tiene varias partes: leer del sistema de
-archivos, recibir argumentos a través de la línea de comando, analizar texto,
-hacer consultas HTTP, ... y todas estas cosas pueden enfocarse de muchas formas,
-tanto usando librerías como implementando en VanillaJS.
-
-Por poner un ejemplo, el _parseado_ (análisis) del markdown para extraer los
-links podría plantearse de las siguientes maneras (todas válidas):
-
-* Usando un _módulo_ como [markdown-it](https://github.com/markdown-it/markdown-it),
-  que nos devuelve un arreglo de _tokens_ que podemos recorrer para identificar
-  los links.
-* Siguiendo otro camino completamente, podríamos usar
-  [expresiones regulares (`RegExp`)](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions).
-* También podríamos usar una combinación de varios _módulos_ (podría ser válido
-  transformar el markdown a HTML usando algo como [marked](https://github.com/markedjs/marked)
-  y de ahí extraer los link con una librería de DOM como [JSDOM](https://github.com/jsdom/jsdom)
-  o [Cheerio](https://github.com/cheeriojs/cheerio) entre otras).
-* Usando un _custom renderer_ de [marked](https://github.com/markedjs/marked)
-  (`new marked.Renderer()`).
-
-No dudes en consultar a tus compañeras, coaches y/o el [foro de la comunidad](http://community.laboratoria.la/c/js)
-si tienes dudas existenciales con respecto a estas decisiones. No existe una
-"única" manera correcta :wink:
+$ md-links archivo.md --stats
+También pueden combinarse ambas y en su lugar nos devolverá cuantos links están rotos, cuantos links hay en buen estado, cuantos links hay y cuantos de estos son únicos
+```
+$ md-links ../carpeta --validate  --stats
+```
+o
+```
+$ md-links archivo.md --validate --stats
+```
 
 ### Tutoriales / NodeSchool workshoppers
 
@@ -353,34 +278,3 @@ si tienes dudas existenciales con respecto a estas decisiones. No existe una
 * [Path](https://nodejs.org/api/path.html)
 * [Linea de comando CLI](https://medium.com/netscape/a-guide-to-create-a-nodejs-command-line-package-c2166ad0452e)
 
-## 9. Checklist
-
-### General
-
-* [ ] Puede instalarse via `npm install --global <github-user>/md-links`
-
-### `README.md`
-
-* [ ] Un board con el backlog para la implementación de la librería.
-* [ ] Documentación técnica de la librería.
-* [ ] Guía de uso e instalación de la librería
-
-### API `mdLinks(path, opts)`
-
-* [ ] El módulo exporta una función con la interfaz (API) esperada.
-* [ ] Implementa soporte para archivo individual
-* [ ] Implementa soporte para directorios
-* [ ] Implementa `options.validate`
-
-### CLI
-
-* [ ] Expone ejecutable `md-links` en el path (configurado en `package.json`)
-* [ ] Se ejecuta sin errores / output esperado
-* [ ] Implementa `--validate`
-* [ ] Implementa `--stats`
-
-### Pruebas / tests
-
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions,
-  lines, y branches.
-* [ ] Pasa tests (y linters) (`npm test`).
