@@ -90,7 +90,7 @@ A continuación puedes ver los objetivos de aprendizaje de este proyecto:
 * Los tests unitarios: Jest para tus pruebas unitarias.
 
 ## 5. Diagrama de flujo
-![diagrama] (readme/diagrama.png)
+![Diagrama] (readme/diagrama.png)
 
 ## 6. Documentación técnica de la librería
 
