@@ -6,9 +6,9 @@
 * [2. Objetivo](#2-Objetivo)
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
 * [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Diagrama de flujo](#5-diagrama de flujo)
-* [6.  Documentación técnica de la librería](#6-documentación técnica de la librería)
-* [7. Guía de instalación y uso de la librería](#7-Guía de instalación y uso de la librería)
+* [5. Diagrama de flujo](#5-diagrama-de-flujo)
+* [6.  Documentación técnica de la librería](#6-documentación-técnica-de-la-librería)
+* [7. Guía de instalación y uso de la librería](#7-Guía-de-instalación-y-uso-de-la-librería)
 
 
 ***
